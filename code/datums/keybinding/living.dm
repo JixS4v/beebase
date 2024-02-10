@@ -61,7 +61,7 @@
 	return TRUE
 
 /datum/keybinding/living/rest
-	hotkey_keys = list("U")
+	hotkey_keys = list("V") // BEESTATION EDIT: Sane hotkeys + LOOC
 	name = "rest"
 	full_name = "Rest"
 	description = "Lay down, or get up."
