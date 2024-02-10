@@ -319,9 +319,9 @@
 		return
 
 	// Display visual above source
-	if(CHECK_BITFIELD(runechat_flags, EMOTE_MESSAGE))
+	if(runechat_flags & EMOTE_MESSAGE)
 		new /datum/chatmessage(raw_message, speaker, src, message_language, list("emote", "italics"))
-	else if (CHECK_BITFIELD(runechat_flags, LOOC_MESSAGE)) // BEESTATION EDIT: looc
+	else if (runechat_flags & LOOC_MESSAGE) // BEESTATION EDIT: looc
 		new /datum/chatmessage(raw_message, speaker, src, message_language, list("looc", "italics"))
 	else
 		new /datum/chatmessage(raw_message, speaker, src, message_language, spans)

@@ -19,7 +19,7 @@ GLOBAL_VAR_INIT(looc_allowed, TRUE)
 	if(is_banned_from(mob.ckey, "OOC"))
 		to_chat(src, "<span class='danger'>You have been banned from OOC and LOOC.</span>")
 		return
-	if(!CHECK_BITFIELD(prefs.chat_toggles, CHAT_OOC))
+	if(!(chat_toggles & CHAT_OOC))
 		to_chat(src, span_danger("You have OOC (and therefore LOOC) muted."))
 		return
 
@@ -53,7 +53,7 @@ GLOBAL_VAR_INIT(looc_allowed, TRUE)
 		if(!GLOB.dooc_allowed && (mob.stat == DEAD) && SSticker.current_state < GAME_STATE_FINISHED && !mentor_datum)
 			to_chat(usr, span_danger("LOOC for dead mobs has been turned off."))
 			return
-		if(CHECK_BITFIELD(prefs.muted, MUTE_OOC))
+		if(prefs.muted & MUTE_OOC)
 			to_chat(src, span_danger("You cannot use LOOC (muted)."))
 			return
 		if(handle_spam_prevention(msg, MUTE_OOC))
@@ -80,7 +80,7 @@ GLOBAL_VAR_INIT(looc_allowed, TRUE)
 	var/list/hearers = list()
 	for(var/mob/hearer in get_hearers_in_view(9, mob))
 		var/client/client = hearer.client
-		if(QDELETED(client) || !CHECK_BITFIELD(client.prefs.chat_toggles, CHAT_OOC))
+		if(QDELETED(client) || !(client.prefs.chat_toggles & CHAT_OOC))
 			continue
 		hearers[client] = TRUE
 		if((client in GLOB.admins) && is_admin_looc_omnipotent(client))
@@ -90,7 +90,7 @@ GLOBAL_VAR_INIT(looc_allowed, TRUE)
 			hearer.create_chat_message(mob, /datum/language/common, "\[LOOC: [raw_msg]\]", runechat_flags = LOOC_MESSAGE)
 
 	for(var/client/client in GLOB.admins)
-		if(!CHECK_BITFIELD(client.prefs.chat_toggles, CHAT_OOC) || !is_admin_looc_omnipotent(client))
+		if(!(client.prefs.chat_toggles & CHAT_OOC) || !is_admin_looc_omnipotent(client))
 			continue
 		var/prefix = "[hearers[client] ? "" : "(R)"]LOOC"
 		if(client.prefs.read_preference(/datum/preference/toggle/enable_runechat_looc))
