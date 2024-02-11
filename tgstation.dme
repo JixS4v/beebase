@@ -14,10 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
-#include "beestation\code\datums\keybinding\communication.dm"
-#include "beestation\code\modules\client\preferences\admin.dm"
-#include "beestation\code\modules\client\preferences\runechat.dm"
-#include "beestation\code\modules\client\verbs\looc.dm"
+
 #include "code\__byond_version_compat.dm"
 #include "code\_compile_options.dm"
 #include "code\_experiments.dm"
@@ -6089,4 +6086,8 @@
 #include "interface\fonts\spess_font.dm"
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
+#include "beestation\code\datums\keybinding\communication.dm"
+#include "beestation\code\modules\client\preferences\admin.dm"
+#include "beestation\code\modules\client\preferences\runechat.dm"
+#include "beestation\code\modules\client\verbs\looc.dm"
 // END_INCLUDE
