@@ -6,4 +6,4 @@ about: Create a report to help reach parity
 
 ## Summary
 
-<!-- Briefly explain your issue in a few plain sentences, e.g. "X has Y issue" "When I do X, Y happens instead of Z" "X on Y map has Z issue". You may copy and paste the issue title here if it is suitable. -->
+<!-- Briefly explain the feature, optionally link relevant PRs to make it easier to port -->
