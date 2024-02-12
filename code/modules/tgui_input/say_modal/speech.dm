@@ -46,7 +46,7 @@
 			return TRUE
 		if(LOOC_CHANNEL) // BEESTATION EDIT: LOOC
 			client.looc(entry)
-			retrun TRUE
+			return TRUE
 		if(ADMIN_CHANNEL)
 			client.cmd_admin_say(entry)
 			return TRUE
