@@ -19,7 +19,7 @@ GLOBAL_VAR_INIT(looc_allowed, TRUE)
 	if(is_banned_from(mob.ckey, "OOC"))
 		to_chat(src, "<span class='danger'>You have been banned from OOC and LOOC.</span>")
 		return
-	if(!(chat_toggles & CHAT_OOC))
+	if(!(client.prefs.chat_toggles & CHAT_OOC))
 		to_chat(src, span_danger("You have OOC (and therefore LOOC) muted."))
 		return
 
@@ -45,7 +45,6 @@ GLOBAL_VAR_INIT(looc_allowed, TRUE)
 		message_admins("[ADMIN_LOOKUPFLW(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[msg]\"")
 		log_admin_private("[key_name(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[msg]\"")
 
-	// letting mentors use this as they might actually use this to help people. this cannot possibly go wrong! :clueless:
 	if(!holder)
 		if(!CONFIG_GET(flag/looc_enabled))
 			to_chat(src, span_danger("LOOC is disabled."))
