@@ -89,7 +89,7 @@ export const MESSAGE_TYPES = [
     description: 'The bluewall of global OOC messages',
     selector: '.ooc, .adminooc, .adminobserverooc, .oocplain',
   },
- {
+  {
     type: MESSAGE_TYPE_LOOC,
     name: 'LOOC',
     description: 'Local Out Of Character',
