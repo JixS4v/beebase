@@ -3,4 +3,5 @@
 #define RADIO_CHANNEL "Radio"
 #define ME_CHANNEL "Me"
 #define OOC_CHANNEL "OOC"
+#define LOOC_CHANNEL "LOOC" // BEESTATION EDIT: looc
 #define ADMIN_CHANNEL "Admin"
