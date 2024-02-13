@@ -17,7 +17,7 @@ REVIVAL_BRAIN_LIFE -1
 
 ## LOOC ###
 ## Comment this out if you want to disable LOOC
-LOOC
+LOOC_ENABLED
 
 ## EMOJI ###
 ## Comment this out if you want to disable emojis
