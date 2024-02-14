@@ -6091,6 +6091,7 @@
 #include "interface\fonts\vcr_osd_mono.dm"
 #include "beestation\code\datums\keybinding\communication.dm"
 #include "beestation\code\modules\client\preferences\admin.dm"
-#include "beestation\code\modules\client\preferences\runechat.dm"
 #include "beestation\code\modules\client\verbs\looc.dm"
+#include "beestation\code\modules\client\preferences\runechat.dm"
+#include "beestation\code\game\objects\items\devices\sound_synth.dm"
 // END_INCLUDE
